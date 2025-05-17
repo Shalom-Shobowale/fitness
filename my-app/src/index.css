@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-Robo;
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: orange;
+  opacity: 1;
+}
+.slick-dots li.slick-active div {
+  background-color: orange;
+  opacity: 1;
+}
+/* make sure these selectors come *after* the slick-theme import */
+
+
+
