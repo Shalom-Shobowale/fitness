@@ -10,8 +10,8 @@ export default function Login() {
     e.preventDefault();
 
     const url = isLogin
-      ? "http://localhost:5000/api/admin/login"
-      : "http://localhost:5000/api/admin/register";
+      ? "https://fitness-3wke.onrender.com/api/admin/login"
+      : "https://fitness-3wke.onrender.com/api/admin/register";
 
     const payload = isLogin
       ? { username, password }

@@ -22,7 +22,7 @@ export default function AddWorkout() {
     try {
       const token = localStorage.getItem("token"); // Make sure the token is stored here after login
 
-      const res = await fetch("http://localhost:5000/api/workouts", {
+      const res = await fetch("https://fitness-3wke.onrender.com/api/workouts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

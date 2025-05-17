@@ -30,7 +30,7 @@ export default function AdminDashboard() {
     const fetchBookings = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await fetch("http://localhost:5000/api/bookings", {
+        const res = await fetch("https://fitness-3wke.onrender.com/api/bookings", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/bookings/${id}`, {
+      const res = await fetch(`https://fitness-3wke.onrender.com/api/bookings/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

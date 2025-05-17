@@ -1,5 +1,3 @@
-import React from "react";
-
 const Offers = () => {
   return (
     <div className="w-full bg-secondary h-[130vh] md:h-[75vh] flex items-center ">

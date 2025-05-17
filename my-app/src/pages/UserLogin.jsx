@@ -36,8 +36,8 @@ export default function UserLogin({ setIsAuthenticated, setIsAdmin }) {
     e.preventDefault();
 
     const url = isLogin
-      ? "http://localhost:5000/api/users/login"
-      : "http://localhost:5000/api/users/register";
+      ? "https://fitness-3wke.onrender.com/api/users/login"
+      : "https://fitness-3wke.onrender.com/api/users/register";
 
     const payload = isLogin
       ? {

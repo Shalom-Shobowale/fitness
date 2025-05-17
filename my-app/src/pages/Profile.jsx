@@ -19,7 +19,7 @@ export default function Profile({ setIsAuthenticated }) {
           return;
         }
 
-        const res = await fetch("http://localhost:5000/api/users/profile", {
+        const res = await fetch("https://fitness-3wke.onrender.com/api/users/profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ export default function Profile({ setIsAuthenticated }) {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/users/profile", {
+      const res = await fetch("https://fitness-3wke.onrender.com/api/users/profile", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

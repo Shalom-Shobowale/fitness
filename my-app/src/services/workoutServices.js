@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/workouts";
+const API_URL = "https://fitness-3wke.onrender.com/api/workouts";
 
 // Fetch all workout plans
 export async function getAllWorkouts() {
@@ -30,7 +30,7 @@ export async function deleteWorkout(id) {
 
 // ✅ New: Log a workout completion
 export async function logWorkout(id) {
-  const res = await fetch(`http://localhost:5000/api/workouts/${id}/complete`, {
+  const res = await fetch(`https://fitness-3wke.onrender.com/api/workouts/${id}/complete`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',

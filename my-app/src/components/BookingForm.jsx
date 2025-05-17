@@ -24,7 +24,7 @@ export default function BookingForm() {
     setMessage(null);
 
     try {
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch("https://fitness-3wke.onrender.com/api/bookings", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
