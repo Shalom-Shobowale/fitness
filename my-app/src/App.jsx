@@ -17,7 +17,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import { CreateProvider } from "./Context/CreateContext";
 import Login from "./pages/Login";
 import UserLogin from "./pages/UserLogin";
-import WorkoutDetail from "./components/workoutDetails";
+import WorkoutDetail from "./components/WorkoutDetails.jsx"
 import AddWorkout from "./components/AddWorkout.jsx";
 import Profile from "./pages/Profile.jsx";
 
