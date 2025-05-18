@@ -62,7 +62,7 @@ router.patch("/:id/complete", async (req, res) => {
       return res.status(404).json({ message: "Workout not found" });
     }
 
-    workout.completed = true; // Add this field to your model if it doesn't exist yet
+    workout.completed = true; 
     await workout.save();
 
     res.status(200).json({ message: "Workout marked as completed" });
@@ -81,7 +81,7 @@ router.delete("/:id", async (req, res) => {
     }
     res.status(200).json({ message: "Workout deleted" });
   } catch (err) {
-    console.error("Error deleting workout:", err); // optional
+    console.error("Error deleting workout:", err); 
     res.status(500).json({ error: "Server error" });
   }
 });

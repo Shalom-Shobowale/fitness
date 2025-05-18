@@ -15,11 +15,6 @@ import workoutLogsRoutes from "./routes/workoutLogs.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
-
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174", "https://fitness-3wke.onrender.com"];
-
-// ✅ UPDATED CORS CONFIG
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -30,10 +25,13 @@ app.use(
       }
     },
     credentials: true,
-    exposedHeaders: ["Authorization"], // ✅ ADD THIS LINE
+    exposedHeaders: ["Authorization"], 
   })
 );
 
+const PORT = process.env.PORT || 5000;
+
+const allowedOrigins = ["http://localhost:5173", "http://localhost:5174", "https://fitness-frontend-b1am.onrender.com"];
 // JSON Body Parser
 app.use(express.json());
 

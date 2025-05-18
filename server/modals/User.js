@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
     username: { type: String, required: true, unique: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    goal: { type: String }, // ✅ must match the form field name
+    goal: { type: String }, 
     weight: { type: Number },
     height: { type: Number },
     age: { type: Number },
