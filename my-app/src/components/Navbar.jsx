@@ -35,13 +35,13 @@ const Navbar = () => {
     const handleScroll = throttle(() => {
       const scrollPosition = window.scrollY;
       const pageHeight = document.documentElement.scrollHeight;
-      const quarterPageHeight = pageHeight / 4; 
+      const quarterPageHeight = pageHeight / 4;
       if (scrollPosition > quarterPageHeight) {
-        setIsSticky(true); 
+        setIsSticky(true);
       } else {
         setIsSticky(false);
       }
-    }, 200); 
+    }, 200);
 
     window.addEventListener("scroll", handleScroll);
 
@@ -56,71 +56,114 @@ const Navbar = () => {
         isSticky ? "fixed top-0 left-0 right-0 shadow-md" : ""
       }`}
     >
-      <div className="text-2xl md:text-4xl text-secondary italic font-extrabold">
-        FITNESS
-      </div>
+      <NavLink
+        to="/"
+        className="text-2xl md:text-4xl text-secondary font-extrabold"
+      >
+        FITBODY
+      </NavLink>
 
       <ul
-        className={`md:flex p-10 md:p-0 md:space-y-0 space-y-4 md:space-x-8 font-semibold absolute w-full md:justify-center left-0 md:top-7 bg-white text-gray-600 z-10 md:bg-transparent ${
+        className={`md:flex p-10 md:p-0 md:space-x-8 font-semibold absolute w-full md:justify-center text-center left-0 md:top-7 bg-white text-gray-600 z-10 md:bg-transparent ${
           menuOpen ? "top-[64px]" : "top-[-490px]"
         }`}
       >
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "text-secondary" : "hover:text-gray-600"
-            }
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? "text-secondary" : "hover:text-gray-600"
-            }
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              isActive ? "text-secondary" : "hover:text-gray-600"
-            }
-          >
-            Services
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/classes"
-            className={({ isActive }) =>
-              isActive ? "text-secondary" : "hover:text-gray-600"
-            }
-          >
-            Classes
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? "text-secondary" : "hover:text-gray-600"
-            }
-          >
-            Contact Us
-          </NavLink>
-        </li>
+        <NavLink to="/" onClick={() => setMenuOpen(false)}>
+          {({ isActive }) => (
+            <li
+              className={`md:bg-transparent md:text-gray-600 md:py-0 md:rounded-none ${
+                isActive ? "bg-secondary text-white rounded-md py-2" : ""
+              }`}
+            >
+              <span
+                className={`md:bg-transparent md:py-0 md:rounded-none ${
+                  isActive ? "md:text-secondary" : "hover:text-gray-600"
+                }`}
+              >
+                Home
+              </span>
+            </li>
+          )}
+        </NavLink>
+
+        <NavLink to="/about" onClick={() => setMenuOpen(false)}>
+          {({ isActive }) => (
+            <li
+              className={`md:bg-transparent md:text-gray-600 md:py-0 md:rounded-none md:my-0 my-4 ${
+                isActive ? "bg-secondary text-white rounded-md py-2" : ""
+              }`}
+            >
+              <span
+                className={`md:bg-transparent md:py-0 md:rounded-none ${
+                  isActive ? "md:text-secondary" : "hover:text-gray-600"
+                }`}
+              >
+                About
+              </span>
+            </li>
+          )}
+        </NavLink>
+
+        <NavLink to="/services" onClick={() => setMenuOpen(false)}>
+          {({ isActive }) => (
+            <li
+              className={`md:bg-transparent md:text-gray-600 md:py-0 md:rounded-none ${
+                isActive ? "bg-secondary text-white rounded-md py-2" : ""
+              }`}
+            >
+              <span
+                className={`md:bg-transparent md:py-0 md:rounded-none ${
+                  isActive ? "md:text-secondary" : "hover:text-gray-600"
+                }`}
+              >
+                Services
+              </span>
+            </li>
+          )}
+        </NavLink>
+
+        <NavLink to="/classes" onClick={() => setMenuOpen(false)}>
+          {({ isActive }) => (
+            <li
+              className={`md:bg-transparent md:text-gray-600 md:py-0 md:rounded-none md:my-0 my-4 ${
+                isActive ? "bg-secondary text-white rounded-md py-2" : ""
+              }`}
+            >
+              <span
+                className={`md:bg-transparent md:py-0 md:rounded-none ${
+                  isActive ? "md:text-secondary" : "hover:text-gray-600"
+                }`}
+              >
+                Classes
+              </span>
+            </li>
+          )}
+        </NavLink>
+
+        <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+          {({ isActive }) => (
+            <li
+              className={`md:bg-transparent md:text-gray-600 md:py-0 md:rounded-none ${
+                isActive ? "bg-secondary text-white rounded-md py-2" : ""
+              }`}
+            >
+              <span
+                className={`md:bg-transparent md:py-0 md:rounded-none ${
+                  isActive ? "md:text-secondary" : "hover:text-gray-600"
+                }`}
+              >
+                Contact Us
+              </span>
+            </li>
+          )}
+        </NavLink>
 
         {/* Show only if admin */}
         {isAdmin && (
-          <li>
+          <li className="md:my-0 my-4">
             <NavLink
               to="/adminDashboard"
+              onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
                 isActive ? "text-secondary" : "hover:text-gray-600"
               }
@@ -142,16 +185,16 @@ const Navbar = () => {
         </li>
 
         {isLoggedIn && (
-          <li className="text-red-500 cursor-pointer" onClick={handleLogout}>
+          <li className="text-red-500 cursor-pointer my-4 md:my-0" onClick={handleLogout}>
             Logout
           </li>
         )}
 
         <div
           onClick={() => setShowForm(true)}
-          className="md:absolute md:right-[5%] md:-top-[16.5px]"
+          className="md:absolute md:right-[5%] md:-top-[16.5px] w-full md:w-auto"
         >
-          <Button name="Book Now" px="px-8" py="py-[15px]" />
+          <Button name="Book Now" px="w-full md:px-8" py="py-[15px]" />
         </div>
       </ul>
 

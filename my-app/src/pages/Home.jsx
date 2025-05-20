@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Landing />
-      <Perfect />
+      <Perfect mt='md:mt-24 mt-14' />
       <Build />
       <Schedule />
       <Offers />

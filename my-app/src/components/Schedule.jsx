@@ -8,10 +8,10 @@ const Schedule = () => {
     setMenu(id);
   }
   return (
-    <div className='w-[80%] mx-auto flex flex-col items-center my-14'>
+    <div className='w-[70%] mx-auto flex flex-col items-center my-14'>
       <h1 className='text-4xl font-extrabold mb-2'>Our Class Schedule</h1>
       <img src="circle-line.png" alt="" className="mb-14" />
-      <div className='flex flex-wrap bg-purple-100 py-2 font-bold px-4 rounded-xl md:gap-16 text-sm w-full'>
+      <div className='flex flex-wrap bg-purple-100 py-2 font-bold justify-center rounded-xl md:gap-16 text-sm w-full'>
         <button onClick={() => handleClick(1)} className={`px-4 py-2 ${menu === 1 ? 'bg-accent rounded-md shadow-md shadow-accent text-white' : 'bg-transparent text-black'}`}>Monday</button>
         <button onClick={()=>handleClick(2)} className={`px-4 py-2 ${menu === 2 ? 'bg-accent rounded-md shadow-md shadow-accent text-white' : 'bg-transparent text-black'}`}>Tuesday</button>
         <button onClick={()=>handleClick(3)} className={`px-4 py-2 ${menu === 3 ? 'bg-accent rounded-md shadow-md shadow-accent text-white' : 'bg-transparent text-black'}`}>Wednesday</button>

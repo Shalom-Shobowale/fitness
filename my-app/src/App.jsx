@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
@@ -20,6 +21,16 @@ import UserLogin from "./pages/UserLogin";
 import WorkoutDetail from "./components/WorkoutDetails.jsx"
 import AddWorkout from "./components/AddWorkout.jsx";
 import Profile from "./pages/Profile.jsx";
+
+
+function ScrollToTop(){
+  const { pathname } = useLocation();
+
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  },[pathname])
+  return null;
+ }
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -38,6 +49,7 @@ export default function App() {
   return (
     <CreateProvider>
       <Router>
+        <ScrollToTop />
         {isAuthenticated ? (
           <>
             <Navbar />

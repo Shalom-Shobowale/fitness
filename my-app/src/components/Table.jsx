@@ -66,7 +66,7 @@ const Table = () => {
         <tbody >
           <tr className="grid md:grid-cols-4">
             {tableData.map((item) => (
-              <td key={item.id} className={` md:border-r flex flex-col items-center w-72 py-6 ${item.id == 1 || item.id == 2 || item.id == 3 || item.id == 4 ? 'border-b' : '' } ${item.id == 4 || item.id == 8 ? 'border-r-white' : ''} `}>
+              <td key={item.id} className={` md:border-r flex flex-col items-center w-72 py-6 ${item.id == 1 || item.id == 2 || item.id == 3 || item.id == 4 ? 'border-b md:border-b' : 'md:border-b-0 border-b' } ${item.id == 4 || item.id == 8 ? 'border-r-white' : ''} `}>
                 <img
                   src={item.img}
                   alt=""

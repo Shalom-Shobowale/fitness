@@ -8,8 +8,8 @@ const About = () => {
   return (
     <div>
       <Landing2 name="About Us" link='About'/>
-      <div className='mb-28'>
-        <Perfect />
+      <div className='mb-12'>
+        <Perfect mt='mt-14' />
       </div>
       <Offers />
       <Testimony />

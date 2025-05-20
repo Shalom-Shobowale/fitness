@@ -5,8 +5,6 @@ const cards = [
   { id: 2, image: "s-icon2.png", title: "Dance" },
   { id: 3, image: "s-icon3.png", title: "Fitness" },
   { id: 4, image: "s-icon4.png", title: "Health" },
-  // { id: 5, image: "s-icon5.png", title: "Lifestyle" },
-  // { id: 6, image: "s-icon6.png", title: "Health" },
 ];
 
 const Build = () => {
@@ -33,25 +31,20 @@ const Build = () => {
           congue est. Nullam vitae aliquet turpis.
         </p>
       </div>
-      <div className="md:w-[50%] grid md:grid-cols-2 gap-5">
+      <div className="md:w-[50%] grid grid-cols-1 md:grid-cols-2 gap-5">
         {cards.map((card) => (
           <div
             key={card.id}
-            className={`bg-white h-72 shadow-xl px-6 rounded-2xl flex  items-center flex-col  ${
-              card.id === 2 ? "mt-8" : ""
-            } ${card.id === 3 ? "relative -top-7" : ""}`}
+            className={`h-72 shadow-xl px-6 rounded-2xl flex items-center flex-col 
+        ${card.id === 2 ? "md:mt-8" : ""} 
+        ${card.id === 3 ? "md:relative md:-top-7" : ""}
+      `}
           >
-            <div
-              className={`group h-24 w-20 bg-accent rounded-b-full flex justify-center items-center ${
-                card.id === card.id ? "hover:bg-secondary" : "bg-accent"
-              }`}
-            >
+            <div className="group h-24 w-20 bg-accent rounded-b-full flex justify-center items-center hover:bg-secondary transition-colors">
               <img
                 src={card.image}
                 alt=""
-                className={`transition-all ${
-                  card.id === card.id ? "group-hover:animate-bounce" : ""
-                }`}
+                className="transition-all group-hover:animate-bounce"
               />
             </div>
 

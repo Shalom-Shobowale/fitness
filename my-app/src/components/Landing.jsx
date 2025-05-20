@@ -8,20 +8,14 @@ import { NavLink } from "react-router-dom";
 
 const Landing = () => {
   return (
-    <div className="relative">
-      <div
-        className="flex justify-center items-center h-screen"
-        style={{
-          backgroundImage: "url('background-1.jpg')",
-          backgroundSize: "cover",
-        }}
-      >
+    <div>
+      <div className={`flex justify-center items-center h-screen bg-center bg-cover bg-no-repeat md:relative bg-[url('/bg-image.png')] md:bg-[url('/background-1.jpg')]`}>
         <div className="w-[92%] flex flex-col items-end text-end">
           <h1 className="text-6xl font-extrabold text-secondary">
             BEST
             <br /> FITNESS
           </h1>
-          <p className="my-5 text-gray-600">
+          <p className="my-5 md:text-gray-600 text-white">
             Our club encourages wellness by providing
             <br /> top-notch equipment, first-class instructors,
             <br /> innovative classes, and qualified staff.
@@ -31,7 +25,7 @@ const Landing = () => {
           </NavLink>
         </div>
       </div>
-      <div className="absolute w-full md:-bottom-9 top-[92%]">
+      <div className="md:absolute w-full md:-bottom-32 relative">
         <form
           action=""
           className="flex flex-col md:flex-row w-[90%] mx-auto md:py-7 md:px-0 px-7 md:pl-7 rounded-lg shadow-lg bg-white py-8 md:h-[13vh] h-[65vh]"
@@ -77,8 +71,14 @@ const Landing = () => {
             />
           </div>
         </form>
-        <NavLink to='/addworkout' className="md:w-[20%] bg-accent hover:bg-secondary rounded-md ml-4 absolute md:top-0 md:right-[5.1%] h-[13vh] flex items-center justify-center md:bottom-0 bottom-7 w-[76%] right-[11%] text-4xl md:text-base">
-          <Button name="Book your Appointment" px="" py="" />
+        <NavLink
+          to="/addworkout"
+          className="md:w-[20%] w-[76%] bg-accent hover:bg-secondary text-white text-center text-base
+             rounded-md absolute h-[13vh] flex items-center justify-center
+             md:top-0 md:right-[5.1%] md:bottom-0 top-[70%] right-11
+             transition-colors duration-200 font-semibold"
+        >
+          Book your Appointment
         </NavLink>
       </div>
     </div>

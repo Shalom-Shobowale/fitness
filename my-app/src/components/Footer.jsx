@@ -11,21 +11,21 @@ const Footer = () => {
   return (
     <>
       <div className="bg-secondary md:rounded-t-[130px] mt-12">
-        <div className="w-[80%] mx-auto py-20 text-white relative">
+        <div className="w-[80%] mx-auto py-20 text-white">
           <div className="flex md:flex-row flex-col justify-between gap-5 items-center border-b border-white pb-7">
             <h1 className="text-white text-[2.1em] font-bold font-source">
               Subscribe To Our Newsletter For Latest Updates
             </h1>
-            <input
-              type="email"
-              name=""
-              id=""
-              placeholder="Email Address..."
-              className="relative md:w-[30%] w-full rounded-full px-5 text-xs text-gray-500 h-12"
-            />
-            <button className="text-white bg-accent py-[10px] px-8 rounded-full absolute hover:bg-secondary md:top-[14.6%] top-[19.5%]  md:right-[0.1%] right-0 ">
-              Subscribe
-            </button>
+            <div className="relative w-full md:w-[32%]">
+              <input
+                type="email"
+                placeholder="Email Address..."
+                className="w-full rounded-full px-5 text-xs text-gray-500 h-12 pr-32"
+              />
+              <button className="absolute right-[0.8%] top-[4.5%] bg-accent text-white py-[12px] px-9 font-semibold rounded-full hover:bg-secondary text-sm">
+                Subscribe
+              </button>
+            </div>
           </div>
           <div className="flex md:flex-row flex-wrap  pt-16 gap-10">
             <div className="md:w-[22%]">
@@ -126,7 +126,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center text-secondary py-2">2025 Fitness © Shalom design.</p>
+      <p className="text-center text-secondary py-2">
+        2025 Fitness © Shalom design.
+      </p>
     </>
   );
 };

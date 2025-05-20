@@ -10,6 +10,13 @@
     @apply font-Robo;
   }
 }
+@layer components{
+
+.input {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+}
 
 .slick-dots li.slick-active button:before {
   color: orange;
@@ -19,6 +26,7 @@
   background-color: orange;
   opacity: 1;
 }
+
 /* make sure these selectors come *after* the slick-theme import */
 
 

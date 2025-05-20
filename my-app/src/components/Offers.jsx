@@ -1,6 +1,6 @@
 const Offers = () => {
   return (
-    <div className="w-full bg-secondary h-[130vh] md:h-[75vh] flex items-center ">
+    <div className="w-full bg-secondary md:pt-0 pt-10 flex items-center ">
       <div className="md:pl-36 md:px-0 px-3 flex md:flex-row flex-col items-center gap-8">
         <div className="md:w-[45%] text-white">
           <h1 className="font-extrabold text-[2.7em] leading-[1.2]">
