@@ -9,17 +9,48 @@ const router = express.Router();
 
 // POST /api/users/register
 router.post("/register", async (req, res) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, goal, weight, height, age, gender } =
+    req.body;
 
   try {
     const existing = await User.findOne({ email });
     if (existing)
       return res.status(400).json({ message: "User already exists" });
 
-    const user = new User({ username, email, password }); 
+    const user = new User({
+      username,
+      email,
+      password,
+      goal,
+      weight,
+      height,
+      age,
+      gender,
+    });
     await user.save();
 
-    res.status(201).json({ message: "User created!" });
+    const token = jwt.sign(
+      { id: user._id, role: user.role },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "1d",
+      }
+    );
+
+    res.status(201).json({
+      token,
+      user: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+        goal: user.goal,
+        weight: user.weight,
+        height: user.height,
+        age: user.age,
+        gender: user.gender,
+      },
+    });
   } catch (err) {
     console.error("Error registering user:", err);
     res.status(500).json({ message: "Server error" });
@@ -48,21 +79,24 @@ router.post("/login", async (req, res) => {
 
     res.status(200).json({
       token,
-      isAdmin, 
+      isAdmin,
       user: {
         id: user._id,
         username: user.username,
         email: user.email,
         role: user.role,
+        goal: user.goal,
+        weight: user.weight,
+        height: user.height,
+        age: user.age,
+        gender: user.gender,
       },
     });
-
   } catch (err) {
     console.error("Login error:", err);
     res.status(500).json({ message: "Server error" });
   }
 });
-
 
 // GET /api/users/profile (protected)
 router.get("/profile", protect, async (req, res) => {
@@ -81,7 +115,7 @@ router.put("/profile", protect, async (req, res) => {
     const updates = {
       username: req.body.username,
       email: req.body.email,
-      goals: req.body.goals,
+      goal: req.body.goals,
       weight: req.body.weight,
       height: req.body.height,
       age: req.body.age,

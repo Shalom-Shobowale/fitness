@@ -81,7 +81,7 @@ export default function UserLogin({ setIsAuthenticated, setIsAdmin }) {
       <div className="flex flex-col lg:flex-row w-full h-[93.3vh]">
         <div className="hidden lg:block w-1/2 bg-[url('/bg-image.png')] bg-cover bg-center" />
 
-        <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-6">
+        <div className="flex flex-1 justify-center items-center p-6">
           <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl w-full max-w-md transition-all duration-300">
             <h2 className="text-3xl font-semibold text-center text-secondary mb-6">
               {isLogin ? "Welcome Back" : "Create an Account"}

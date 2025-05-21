@@ -117,7 +117,7 @@ export default function Profile({ setIsAuthenticated }) {
             />
             <Input
               name="goal" // ✅ fixed from "goal"
-              value={formData.goals || ""}
+              value={formData.goal || ""}
               onChange={handleChange}
             />
             <Input

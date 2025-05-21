@@ -127,7 +127,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="text-center text-secondary py-2">
-        2025 Fitness © Shalom design.
+        2025 Fitbody © Shalom design.
       </p>
     </>
   );

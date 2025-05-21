@@ -173,9 +173,10 @@ const Navbar = () => {
           </li>
         )}
 
-        <li className="absolute right-[10%] md:right-[25%] text-2xl">
+        <li className="absolute top-2 md:top-0 right-[5%] md:right-[23%] text-3xl md:text-2xl">
           <NavLink
             to="/userProfile"
+            onClick={() => setMenuOpen(false)}
             className={({ isActive }) =>
               isActive ? "text-secondary" : "hover:text-gray-600"
             }
