@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { getAllWorkouts, deleteWorkout } from "../services/workoutServices";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast  } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const WorkoutList = () => {
   const [workouts, setWorkouts] = useState([]);
@@ -29,7 +31,7 @@ const WorkoutList = () => {
       await deleteWorkout(id);
       setWorkouts((prev) => prev.filter((w) => w._id !== id));
     } catch (err) {
-      alert("❌ Failed to delete workout.");
+      toast.error("❌ Failed to delete workout.");
       console.error(err);
     }
   };

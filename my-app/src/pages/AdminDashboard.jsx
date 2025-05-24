@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import Button from "../components/Button";
 import { IoMdDownload } from "react-icons/io";
+import { ToastContainer, toast  } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AdminDashboard() {
   const [bookings, setBookings] = useState([]);
@@ -42,7 +44,7 @@ export default function AdminDashboard() {
         const data = await res.json();
         setBookings(data);
       } catch {
-        alert("Error fetching bookings. Please login again.");
+        toast.error("Error fetching bookings. Please login again.");
         navigate("/login");
       } finally {
         setLoading(false);
@@ -68,10 +70,10 @@ export default function AdminDashboard() {
       if (res.ok) {
         setBookings((prev) => prev.filter((b) => b._id !== id));
       } else {
-        alert("Failed to delete booking.");
+        toast.error("Failed to delete booking.");
       }
     } catch {
-      alert("Error deleting booking.");
+      toast.error("Error deleting booking.");
     }
   };
 

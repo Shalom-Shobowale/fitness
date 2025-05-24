@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast  } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Profile({ setIsAuthenticated }) {
   const [user, setUser] = useState(null);
@@ -76,11 +78,11 @@ export default function Profile({ setIsAuthenticated }) {
       const data = await res.json();
 
       if (!res.ok) {
-        alert(data.message || "Failed to update profile");
+        toast.error(data.message || "Failed to update profile");
         return;
       }
 
-      alert("✅ Profile updated successfully!");
+      toast.success("✅ Profile updated successfully!");
       setUser(formData);
       setIsEditing(false);
     } catch (err) {

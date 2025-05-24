@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getWorkoutById, logWorkout } from "../services/workoutServices";
+import { ToastContainer, toast  } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const WorkoutDetail = () => {
   const { id } = useParams();
@@ -12,10 +14,10 @@ const WorkoutDetail = () => {
   const handleLogWorkout = async () => {
     try {
       await logWorkout(id); // should succeed now
-      alert("✅ Workout logged successfully!");
+      toast.success("✅ Workout logged successfully!");
     } catch (err) {
       console.error("❌ Error logging workout:", err);
-      alert("Failed to log workout.");
+      toast.error("Failed to log workout.");
     }
   };
 

@@ -18,19 +18,20 @@ import AdminDashboard from "./pages/AdminDashboard";
 import { CreateProvider } from "./Context/CreateContext";
 import Login from "./pages/Login";
 import UserLogin from "./pages/UserLogin";
-import WorkoutDetail from "./components/WorkoutDetails.jsx"
+import WorkoutDetail from "./components/WorkoutDetails.jsx";
 import AddWorkout from "./components/AddWorkout.jsx";
 import Profile from "./pages/Profile.jsx";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-
-function ScrollToTop(){
+function ScrollToTop() {
   const { pathname } = useLocation();
 
-  useEffect(()=>{
-    window.scrollTo(0, 0)
-  },[pathname])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return null;
- }
+}
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -50,6 +51,19 @@ export default function App() {
     <CreateProvider>
       <Router>
         <ScrollToTop />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+
         {isAuthenticated ? (
           <>
             <Navbar />
