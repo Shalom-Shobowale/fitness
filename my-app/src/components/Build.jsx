@@ -1,10 +1,10 @@
 import React from "react";
 import "animate.css";
 const cards = [
-  { id: 1, image: "s-icon1.png", title: "Yoga" },
-  { id: 2, image: "s-icon2.png", title: "Dance" },
-  { id: 3, image: "s-icon3.png", title: "Fitness" },
-  { id: 4, image: "s-icon4.png", title: "Health" },
+  { id: 1, image: "s-icon1.webp", title: "Yoga" },
+  { id: 2, image: "s-icon2.webp", title: "Dance" },
+  { id: 3, image: "s-icon3.webp", title: "Fitness" },
+  { id: 4, image: "s-icon4.webp", title: "Health" },
 ];
 
 const Build = () => {
@@ -16,7 +16,7 @@ const Build = () => {
           <br className="hidden lg:block" />
           Your Life
         </h1>
-        <img src="circle-line.png" alt="" className="mb-6 md:mb-12" />
+        <img src="circle-line.webp" alt="" className="mb-6 md:mb-12" />
         <p className="text-[14px] text-slate-500 text-pretty leading-[27px]">
           Integer auctor est nec semper hendrerit. Etiam sollicitudin enim in
           urna commodo, in dapibus velit elementum. Ut congue nisl sapien, vel

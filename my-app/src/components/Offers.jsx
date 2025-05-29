@@ -7,7 +7,7 @@ const Offers = () => {
             The Fitness You Will <br className="hidden lg:block" />
             Enjoy With Our Workout
           </h1>
-          <img src="circle-line-w.png" alt="" className="mt-3 mb-4 md:mb-9" />
+          <img src="circle-line-w.webp" alt="" className="mt-3 mb-4 md:mb-9" />
           <p className="text-[14px] leading-[27px]">
             Integer auctor est nec semper hendrerit. Etiam sollicitudin enim in
             urna commodo, in dapibus velit elementum. Ut congue nisl sapien, vel
@@ -24,7 +24,7 @@ const Offers = () => {
         </div>
         <div className="md:w-[55%] relative">
           <img
-            src="video-img.png"
+            src="video-img.webp"
             alt=""
             className="w-full h-[50vh] md:h-[75vh]"
           />
@@ -33,7 +33,7 @@ const Offers = () => {
             className="video-i popup-video absolute top-[40%] left-[40%]"
           >
             {" "}
-            <img src="play-icon.png" alt="img" className="active-icon" />
+            <img src="play-icon.webp" alt="img" className="active-icon" />
           </a>
         </div>
       </div>

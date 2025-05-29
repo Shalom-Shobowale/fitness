@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const Landing = () => {
   return (
     <div>
-      <div className={`flex justify-center items-center h-screen bg-center bg-cover bg-no-repeat md:relative bg-[url('/bg-image.png')] md:bg-[url('/background-1.jpg')]`}>
+      <div className={`flex justify-center items-center h-screen bg-center bg-cover bg-no-repeat md:relative bg-[url('/bg-image.webp')] md:bg-[url('/background-1.webp')]`}>
         <div className="w-[92%] flex flex-col items-end text-end">
           <h1 className="text-6xl font-extrabold text-secondary">
             BEST

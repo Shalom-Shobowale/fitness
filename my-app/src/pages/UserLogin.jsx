@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
       setIsAdmin(isAdmin);
       setIsAuthenticated(true);
       toast.success("Login successful!");
-      setTimeout(() => navigate("/"), 100);
+      setTimeout(() => navigate("/userProfile"), 100);
     } else {
       toast.success("Registration successful! You can now login.");
       setIsLogin(true);
@@ -103,7 +103,7 @@ const handleSubmit = async (e) => {
 
       <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-sky-100 to-blue-200">
         <div className="flex flex-col lg:flex-row w-full h-[93.3vh]">
-          <div className="hidden lg:block w-1/2 bg-[url('/bg-image.png')] bg-cover bg-center" />
+          <div className="hidden lg:block w-1/2 bg-[url('/bg-image.webp')] bg-cover bg-center" />
 
           <div className="flex flex-1 justify-center items-center p-6">
             <div className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-xl w-full max-w-md transition-all duration-300">

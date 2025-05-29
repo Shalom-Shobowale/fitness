@@ -8,14 +8,14 @@ const Perfect = ({ mt }) => {
       className={`flex flex-col md:flex-row gap-10 w-[95%] mx-auto items-center ${mt}`}
     >
       <div className="md:w-[50%]">
-        <img src="about-img.png" alt="" className="" />
+        <img src="about-img.webp" alt="" className="" />
       </div>
       <div className="md:w-[40%]">
         <h1 className="text-4xl font-extrabold leading-tight mb-3">
           Let Us Find The Perfect <br className="hidden lg:block" /> Workout For
           You !{" "}
         </h1>
-        <img src="circle-line.png" alt="" className="md:mb-10 mb-5" />{" "}
+        <img src="circle-line.webp" alt="" className="md:mb-10 mb-5" />{" "}
         <p className="text-[14px] text-gray-500 text-pretty leading-[27px]">
           Fusce orci ligula, tincidunt ut metus vel, venenatis aliquet tortor.
           Duis et consequat enim. Curabitur pulvinar, dolor at pulvinar

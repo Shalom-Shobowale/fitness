@@ -5,63 +5,63 @@ import "slick-carousel/slick/slick-theme.css";
 
 const testimonyData = [
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Jone Dose",
     title: "CEO & Founder",
     testimony:
       "Integer auctor est nec semper hendrerit. Etiam sollicitudin enim in urna commodo, in dapibus velit elementum.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Jane Smith",
     title: "Manager",
     testimony:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "John Doe",
     title: "Trainer",
     testimony:
       "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Emily Johnson",
     title: "Member",
     testimony:
       "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Michael Brown",
     title: "Member",
     testimony:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Sarah Davis",
     title: "Member",
     testimony:
       "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "David Wilson",
     title: "Member",
     testimony:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Laura Martinez",
     title: "Member",
     testimony:
       "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
   },
   {
-    img: "testimonial-img.png",
+    img: "testimonial-img.webp",
     name: "Rachel Adam",
     title: "Member",
     testimony:
@@ -100,7 +100,7 @@ const Testimony = () => {
   return (
     <div className="h-[70vh] flex flex-col justify-center items-center bg-[#FBFAFF]">
         <h1 className="text-[2.6em] w-[80%] font-bold text-center">What Our Client Say's</h1>
-        <img src="circle-line.png" alt="" className="mb-14"/>
+        <img src="circle-line.webp" alt="" className="mb-14"/>
       <div className="w-[85%] md:w-[80%] mx-auto">
         <Slider {...settings} className="">
           {testimonyData.map((item, index) => (
@@ -120,7 +120,7 @@ const Testimony = () => {
                         {item.title}
                       </p>
                     </div>
-                    <img src="qutation.png" alt="quote icon" />
+                    <img src="qutation.webp" alt="quote icon" />
                   </div>
                   <p className="text-sm text-gray-600">{item.testimony}</p>
                 </div>
